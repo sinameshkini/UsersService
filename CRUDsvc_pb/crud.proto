@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package userCRUD;
+
+option go_package = "userpb";
+
+message User {
+    int32 id = 1;
+    string username = 2;
+    string password = 3;
+    int32 role = 4;
+}
+
+message FetchRequest{
+
+}
+
+message FetchResponse{
+    repeated User users = 1;
+}
+
+message CreateRequest{
+    User user = 1;
+}
+
+message CreateResponse{
+    User user = 1;
+}
+
+service CRUDService{
+    rpc Fetch(FetchRequest) returns (FetchResponse) {};
+    rpc Create(CreateRequest) returns (CreateResponse) {};
+}
