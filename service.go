@@ -1,7 +1,7 @@
 package main
 
 import (
-	"crudservice/models"
+	"UsersService/models"
 	"fmt"
 )
 

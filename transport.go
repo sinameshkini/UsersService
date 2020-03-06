@@ -1,8 +1,8 @@
 package main
 
 import (
+	"UsersService/models"
 	"context"
-	"crudservice/models"
 	"encoding/json"
 	"fmt"
 	"github.com/go-kit/kit/endpoint"
